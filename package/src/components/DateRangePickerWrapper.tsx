@@ -39,6 +39,7 @@ export interface DateRangePickerWrapperProps {
   onChange: (dateRange: DateRange) => void;
   closeOnClickOutside?: boolean;
   wrapperClassName?: string;
+  mountPoint?: HTMLElement;
 }
 
 const DateRangePickerWrapper: React.FunctionComponent<DateRangePickerWrapperProps> = (
