@@ -8,6 +8,7 @@ import {
   // eslint-disable-next-line no-unused-vars
   Theme,
 } from '@material-ui/core';
+import de from 'date-fns/locale/de';
 import { format, differenceInCalendarMonths } from 'date-fns';
 import ArrowRightAlt from '@material-ui/icons/ArrowRightAlt';
 import Month from './Month';
@@ -87,7 +88,7 @@ const Menu: React.FunctionComponent<MenuProps> = (props: MenuProps) => {
           <Grid container className={classes.header} alignItems="center">
             <Grid item className={classes.headerItem}>
               <Typography variant="subtitle1">
-                {startDate ? format(startDate, 'MMMM DD, YYYY') : 'Start Date'}
+                {startDate ? format(startDate, 'MMMM DD, YYYY', {locale: de}) : 'Start Datum'}
               </Typography>
             </Grid>
             <Grid item className={classes.headerItem}>
@@ -95,7 +96,7 @@ const Menu: React.FunctionComponent<MenuProps> = (props: MenuProps) => {
             </Grid>
             <Grid item className={classes.headerItem}>
               <Typography variant="subtitle1">
-                {endDate ? format(endDate, 'MMMM DD, YYYY') : 'End Date'}
+                {endDate ? format(endDate, 'MMMM DD, YYYY', {locale: de}) : 'End Datum'}
               </Typography>
             </Grid>
           </Grid>

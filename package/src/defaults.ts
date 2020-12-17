@@ -1,5 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
+//import de from 'date-fns/locale/de';
+
 import {
   addDays,
   startOfWeek,
@@ -15,37 +17,37 @@ import { DefinedRange } from './types';
 
 const getDefaultRanges = (date: Date): DefinedRange[] => [
   {
-    label: 'Today',
+    label: 'Heute',
     startDate: date,
     endDate: date,
   },
   {
-    label: 'Yesterday',
+    label: 'Gestern',
     startDate: addDays(date, -1),
     endDate: addDays(date, -1),
   },
   {
-    label: 'This Week',
+    label: 'Diese Woche',
     startDate: startOfWeek(date),
     endDate: endOfWeek(date),
   },
   {
-    label: 'Last Week',
+    label: 'Letzte Woche',
     startDate: startOfWeek(addWeeks(date, -1)),
     endDate: endOfWeek(addWeeks(date, -1)),
   },
   {
-    label: 'Last 7 Days',
+    label: 'Letzten 7 Tage',
     startDate: addWeeks(date, -1),
     endDate: date,
   },
   {
-    label: 'This Month',
+    label: 'Dieser Monat',
     startDate: startOfMonth(date),
     endDate: endOfMonth(date),
   },
   {
-    label: 'Last Month',
+    label: 'Letzter Monat',
     startDate: startOfMonth(addMonths(date, -1)),
     endDate: endOfMonth(addMonths(date, -1)),
   },

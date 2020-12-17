@@ -1,4 +1,5 @@
 import * as React from 'react';
+import de from 'date-fns/locale/de';
 import {
   Paper,
   Grid,
@@ -125,7 +126,7 @@ const Month: React.FunctionComponent<MonthProps> = (props: MonthProps) => {
 
                 return (
                   <Day
-                    key={format(day, 'MM-DD-YYYY')}
+                    key={format(day, 'MM-DD-YYYY', {locale: de})}
                     filled={isStart || isEnd}
                     outlined={isToday(day)}
                     highlighted={highlighted && !isRangeOneDay}
